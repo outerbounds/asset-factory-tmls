@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    body {
+      margin: 0;
+      padding: 2vw;
+      font-family: "GT America","Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+      background: #ffffff;
+    }
+    .chart-container {
+      margin-bottom: 2rem;
+    }
+    .chart-caption, .grid-caption {
+      text-align: left;
+      font-size: 1rem;
+      color: #555;
+      margin: 1.5rem 0 1rem;
+    }
+    .chart {
+      display: flex;
+      height: 20vw;
+      max-height: 100px;
+      gap: 1px;
+      background: #faf7f4;
+      width: 100%;
+    }
+    .bar {
+      flex: 1;
+      background: #5ca9d6;
+      align-self: flex-end;
+    }
+    .bar.highlight {
+      background: #5cbf5c;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.25rem;
+    }
+    .tile {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      background: #ddd;
+      position: relative;
+    }
+    .tile img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="chart-caption">Number of new photos over the last {{num}} batches (<i>updated at {{updated_at}}</i>)</div>
+    <div class="chart" id="barChart">
+      {{#counts}}
+        <div class="bar {{#isFirst}}highlight{{/isFirst}}" style="height: {{perc}}%"></div>
+      {{/counts}}
+    </div>
+  <div class="grid-caption">{{num_new}} new photos in this batch</div>
+  <div class="grid">
+    {{#photos}}
+      <div class="tile"><img src="{{image_url}}" alt=""></div>
+    {{/photos}}
+  </div>
+</body>
+</html>

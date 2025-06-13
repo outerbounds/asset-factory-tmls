@@ -1,0 +1,10 @@
+
+provider = 'outerbounds'
+model = 'outerbounds-qwen2-5-vl-3b-instruct'
+kind = 'outerbounds'
+blobs = [["outerbounds", "Qwen/Qwen2.5-VL-3B-Instruct"]]
+description = "Deployment: `c-5uyqfq` - deployed on the CLI by [ville@outerbounds.co](#)"
+
+
+[tags]
+endpoint_id = "c-5uyqfq"

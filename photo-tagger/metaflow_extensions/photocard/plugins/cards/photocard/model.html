@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Model responses</title>
+  <style>
+    body {
+      font-family: "GT America","Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+      background: #fff;
+      padding: 2rem;
+    }
+    .provider {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.2rem;
+    }
+    .model {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    table {
+      width: auto;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-top: 1.5rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ccc;
+      vertical-align: top;
+    }
+    th {
+      text-align: left;
+    }
+    .photo-col {
+      width: 150px;
+    }
+    .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .response {
+      font-family: monospace;
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      width: 320px;
+    }
+    .latency {
+      width: 40px;
+      white-space: nowrap;
+    }
+    .validity {
+      width: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="provider">Provider: {{provider}}</div>
+<h1 class="model">Model: {{model}}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class="latency">Latency (ms)</th>
+      <th class="photo-col">Photo</th>
+      <th>Response</th>
+      <th>Validity</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#responses}}
+    <tr>
+      <td class="latency">{{latency}}</td>
+      <td><img src="{{image_url}}" alt="sample" class="photo"></td>
+      <td class="response">{{response}}</td>
+      <td class="validity">{{validity}}</td>
+    </tr>
+    {{/responses}}
+  </tbody>
+</table>
+
+</body>
+</html>

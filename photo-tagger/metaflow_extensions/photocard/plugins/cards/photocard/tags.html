@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Tags</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "GT America","Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    }
+    .tag-pill {
+      background-color: #ebe8e5;
+    }
+    .tag-highlight {
+      background-color: #bfdbfe;
+      color: #1e3a8a;
+    }
+    .bg-ground {
+      background-color: #f9f7f494;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans p-6">
+  <div class="max-w-6xl mx-auto grid gap-12">
+    {{#photos}}
+    <div>
+      <div class="relative flex justify-center">
+        <img src="{{image_url}}" alt="Photo" class="w-1/2 h-auto rounded-xl shadow-lg" />
+        <div class="absolute bottom-4 right-[25%] text-sm text-gray-500 bg-white bg-opacity-70 px-3 py-1 rounded">
+          Photo by <a href="{{attribution_url}}" class="underline">{{attribution_text}}</a> on Unsplash
+        </div>
+      </div>
+
+      <!-- Table Section -->
+      <div class="mt-6 overflow-x-auto">
+        <table class="min-w-full text-xs text-left border border-gray-200">
+          <thead class="bg-gray-100 text-gray-600 font-semibold">
+            <tr>
+              <th class="px-4 py-2 border-b border-gray-200">Label</th>
+              <th class="px-4 py-2 border-b border-gray-200">Recall</th>
+              <th class="px-4 py-2 border-b border-gray-200">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Ground Truth -->
+            <tr class="border-b border-gray-100 bg-ground">
+              <td class="px-4 py-2">Ground Truth</td>
+              <td class="px-4 py-2 text-gray-500">—</td>
+              <td class="px-4 py-2 flex flex-wrap gap-2">
+                {{#ground_truth_tags}}
+                <span class="tag-highlight px-3 py-1 rounded-full text-xs">{{.}}</span>
+                {{/ground_truth_tags}}
+              </td>
+            </tr>
+            <!-- Model Rows -->
+            {{#models}}
+            <tr class="border-b border-gray-100">
+              <td class="px-4 py-2"><b>{{model}}</b> by {{provider}}</td>
+              <td class="px-4 py-2 text-gray-700">{{recall}} %</td>
+              <td class="px-4 py-2 flex flex-wrap gap-2">
+                {{#tags}}
+                <span class="{{#highlight}}tag-highlight{{/highlight}}{{^highlight}}tag-pill{{/highlight}} px-3 py-1 rounded-full text-xs">{{label}}</span>
+                {{/tags}}
+              </td>
+            </tr>
+            {{/models}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {{/photos}}
+  </div>
+</body>
+</html>

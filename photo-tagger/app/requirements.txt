@@ -1,0 +1,4 @@
+streamlit==1.45.1
+outerbounds==0.3.174
+metaflow==2.15.14
+openai==1.82.1

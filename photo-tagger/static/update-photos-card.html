@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    body {
+      margin: 0;
+      padding: 2vw;
+      font-family: "GT America","Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+      background: #ffffff;
+    }
+    .chart-container {
+      margin-bottom: 2rem;
+    }
+    .chart-caption, .grid-caption {
+      text-align: left;
+      font-size: 1rem;
+      color: #555;
+      margin: 1.5rem 0 1rem;
+    }
+    .chart {
+      display: flex;
+      height: 20vw;
+      max-height: 100px;
+      gap: 1px;
+      background: #faf7f4;
+      width: 100%;
+    }
+    .bar {
+      flex: 1;
+      background: #5ca9d6;
+      align-self: flex-end;
+    }
+    .bar.highlight {
+      background: #5cbf5c;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.25rem;
+    }
+    .tile {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      background: #ddd;
+      position: relative;
+    }
+    .tile img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="chart-caption">Number of new photos over the last 48 batches (<i>updated at 2025-06-11T18:01:04</i>)</div>
+    <div class="chart" id="barChart">
+        <div class="bar highlight" style="height: 100%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+        <div class="bar " style="height: 0%"></div>
+    </div>
+  <div class="grid-caption">10 new photos in this batch</div>
+  <div class="grid">
+      <div class="tile"><img src="https://images.unsplash.com/photo-1728443139578-cdfbf43e1a72?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1728448186341-75d3ee3c6f70?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1722904218663-f8b880a6823e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1745434038522-5803c66fddfc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1744000253584-aad21a82d253?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1746483966037-c3c9e6374e08?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1747582411588-f9b4acabe995?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1748924388605-fe7da3657563?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjN8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1749498451383-3743a22bec42?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+      <div class="tile"><img src="https://images.unsplash.com/photo-1749569338796-cc9cc311467d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NTg0NzR8MHwxfGFsbHx8fHx8fHx8fDE3NDk2NjQ4NjR8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt=""></div>
+  </div>
+</body>
+</html>

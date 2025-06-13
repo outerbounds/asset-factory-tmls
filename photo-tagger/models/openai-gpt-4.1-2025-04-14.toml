@@ -1,0 +1,10 @@
+
+provider = 'openai'
+model = 'openai-gpt-4-1-2025-04-14'
+kind = 'openai'
+blobs = [["openai", "gpt-4.1-2025-04-14"]]
+description = "Added on the CLI by [ville@outerbounds.co](#)"
+
+[tags]
+authentication = "https://ui.dev-yellow.outerbounds.xyz/dashboard/integrations/p/default/openai"
+external_endpoint_url = "https://platform.openai.com/docs/models/gpt-4.1"

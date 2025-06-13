@@ -1,0 +1,204 @@
+{
+    "perimeter": "default",
+    "project": "photo_tagger",
+    "branch": "feature/finetuning",
+    "version_id": "f62200c",
+    "created_at": "2025-05-29T19:45:34.510287Z",
+    "spec": {
+        "card_info": [
+            {
+                "card_type": "phototagger",
+                "is_eval_flow": true,
+                "metaflow_branch": "user.ville@outerbounds.co",
+                "metaflow_project": "photo_tagger",
+                "step_name": "evaluate",
+                "workflow_name": "EvaluationFlow"
+            }
+        ],
+        "code": [
+            {
+                "display_name": "test (abccce8) - fix issues",
+                "url": "https://github.com/outerbounds/obp-experiments"
+            }
+        ],
+        "created_at": "2024-12-12T14:05:10Z",
+        "data": [
+            {
+                "card_markdown": "# Here's evertyhing about data ....",
+                "description": "this is a photo dataset",
+                "display_name": "photos",
+                "id": "photos"
+            }
+        ],
+        "deployment_events": [
+            {
+                "commit_sha": "fee8851",
+                "container_image": "some.container:image:fee8851",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "fix config",
+                "timestamp": "2025-06-03T23:24:53-07:00"
+            },
+            {
+                "commit_sha": "0e38e3b",
+                "container_image": "some.container:image:0e38e3b",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "remove explicit flushing",
+                "timestamp": "2025-06-03T23:24:28-07:00"
+            },
+            {
+                "commit_sha": "29a8603",
+                "container_image": "some.container:image:29a8603",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "fix asset logging",
+                "timestamp": "2025-06-03T22:29:27-07:00"
+            },
+            {
+                "commit_sha": "021f06a",
+                "container_image": "some.container:image:021f06a",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "add app and other enhancements",
+                "timestamp": "2025-06-03T20:44:36-07:00"
+            },
+            {
+                "commit_sha": "1cbba7c",
+                "container_image": "some.container:image:1cbba7c",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "add highlight card",
+                "timestamp": "2025-06-03T15:35:14-07:00"
+            },
+            {
+                "commit_sha": "9517e4a",
+                "container_image": "some.container:image:9517e4a",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "fix evals table",
+                "timestamp": "2025-06-02T20:39:16-07:00"
+            },
+            {
+                "commit_sha": "d22d4d3",
+                "container_image": "some.container:image:d22d4d3",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "support listing assets",
+                "timestamp": "2025-06-02T20:38:29-07:00"
+            },
+            {
+                "commit_sha": "b74481d",
+                "container_image": "some.container:image:b74481d",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "Merge branch 'main' of github.com:outerbounds/photo-tagger",
+                "timestamp": "2025-06-02T14:52:34-07:00"
+            },
+            {
+                "commit_sha": "404da7b",
+                "container_image": "some.container:image:404da7b",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "make assets work on kubernetes",
+                "timestamp": "2025-06-02T14:52:18-07:00"
+            },
+            {
+                "commit_sha": "2e96bd7",
+                "container_image": "some.container:image:2e96bd7",
+                "owner": "107147005+ob-uk@users.noreply.github.com",
+                "pr_description": "Add list methods for data/models",
+                "pr_title": "Merge pull request #1 from outerbounds/utkarsh/listApis",
+                "timestamp": "2025-06-02T14:33:07-07:00"
+            },
+            {
+                "commit_sha": "ff09d3e",
+                "container_image": "some.container:image:ff09d3e",
+                "owner": "utkarsh@outerbounds.co",
+                "pr_description": "",
+                "pr_title": "Add list methods for data/models",
+                "timestamp": "2025-06-02T14:19:14-07:00"
+            },
+            {
+                "commit_sha": "57d94e0",
+                "container_image": "some.container:image:57d94e0",
+                "owner": "tuulos@gmail.com",
+                "pr_description": "",
+                "pr_title": "initial commit",
+                "timestamp": "2025-06-02T00:21:43-07:00"
+            }
+        ],
+        "markdown": "# Tag Photos with Vision LLMs 📸\n\n![Random Image](https://images.unsplash.com/photo-1642464763840-92ccc69f7f94?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        "models": [
+            {
+                "display_name": "Qwen2.5-VL-3B-Instruct",
+                "id": "outerbounds-qwen2-5-vl-3b-instruct",
+                "description": "a model running on Outerbounds!",
+                "card_markdown": "## QWen2.5-VL-3B-Instruct\n### Hosted on Outerbounds\n\nQwen2-VL has SoTA understanding of images of various resolution & ratio: Qwen2-VL achieves\nstate-of-the-art performance on visual understanding benchmarks, including MathVista, DocVQA,\nRealWorldQA, MTVQA, etc.\n\n**This model is hosted on Outerbounds**\n"
+            },
+            {
+                "display_name": "Llama-3.2-11B-Vision-Instruct-Turbo",
+                "id": "togetherai-llama-3-2-11b-vision-instruct-turbo",
+                "card_markdown": "## Llama 3.2 11B Vision Instruct Turbo\n_Hosted on together.ai_\n\nThe Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image. The models outperform many of the available open source and closed multimodal models on common industry benchmarks.\n\n**This is the larger 90B parameter version of the model.**\n",
+                "icon": "meta"
+            },
+            {
+                "display_name": "Gpt-4.1-2025-04-14",
+                "id": "openai-gpt-4-1-2025-04-14",
+                "card_markdown": "\n## GPT 4.1 (version: 2025-04-14)\n### Hosted on OpenAI\n\nGPT-4.1 is OpenAI's flagship model for complex tasks. It is well suited for problem solving across domains.\n",
+                "icon": "openai"
+            },
+            {
+                "display_name": "Llama-3.2-90B-Vision-Instruct-Turbo",
+                "id": "togetherai-llama-3-2-90b-vision-instruct-turbo",
+                "card_markdown": "## Llama-3.2-90B-Vision-Instruct-Turbo\n### Hosted on together.ai\n\nThe Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image. The models outperform many of the available open source and closed multimodal models on common industry benchmarks.\n\n**This is the larger 90B parameter version of the model.**\n",
+                "icon": "Meta"
+            },
+            {
+                "display_name": "O4-mini-2025-04-16",
+                "id": "openai-o4-mini-2025-04-16",
+                "card_markdown": "\n## o4-mini (version: 2025-04-16)\n### Hosted on OpenAI\n\no4-mini is OpenAI's latest small o-series model. It's optimized for fast, effective reasoning\nwith exceptionally efficient performance in coding and visual tasks.\n",
+                "icon": "OpenAi"
+            }
+        ],
+        "perimeter": "default",
+        "project_branch": "user.ville@outerbounds.co",
+        "project_name": "photo_tagger",
+        "title": "photo_tagger",
+        "updated_at": "2025-06-05T21:33:57Z",
+        "workflows": [
+            {
+                "flow_name": "UpdatePhotos",
+                "flow_template_id": "phototagger.user.villeouterbounds.co.updatephotos",
+                "markdown_description": "Updates photos with a new batch",
+                "metaflow_branch": "user.ville@outerbounds.co",
+                "metaflow_project": "photo_tagger",
+                "tags": [
+                    "photo-pipeline"
+                ]
+            },
+            {
+                "flow_name": "PromptModels",
+                "flow_template_id": "phototagger.user.villeouterbounds.co.promptmodels",
+                "highlight_step_name": "join",
+                "markdown_description": "Runs model inference on the new photos. Results are pumped to the Eval Flow",
+                "metaflow_branch": "user.ville@outerbounds.co",
+                "metaflow_project": "photo_tagger",
+                "tags": [
+                    "photo-pipeline",
+                    "ai-models"
+                ]
+            },
+            {
+                "flow_name": "EvaluationFlow",
+                "flow_template_id": "phototagger.user.villeouterbounds.co.evaluationflow",
+                "markdown_description": "Runs a set of evaluations for the photo tagging project",
+                "metaflow_branch": "user.ville@outerbounds.co",
+                "metaflow_project": "photo_tagger",
+                "tags": [
+                    "eval"
+                ]
+            }
+        ]
+    }
+}
