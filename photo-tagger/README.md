@@ -20,9 +20,9 @@ Fine-tuning is **optional**.  You can run either path:
 ## Quick Start (local CLI)
 
 ```bash
-# 1. Dependencies (CUDA 11.8+, Python ≥3.10)
+# 1. Dependencies (Python ≥3.10)
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt  # ~3 min
+pip install -r requirements.txt 
 
 # 2. Secrets (export or use Outerbounds Integrations feature - see UI tab)
 export client_id=UNSPLASH_KEY     # data ingest
@@ -44,7 +44,7 @@ python promptcustommodels.py --environment=fast-bakery run  # evaluate fine-tune
 python evalsflow.py  --environment=fast-bakery run                      # refresh dashboard
 ```
 
-All of the above can be executed on Outerbounds with `--environment=fast-bakery argo-workflows create` – see inline decorators for resource hints.
+All the above can be deployed on Outerbounds with `--environment=fast-bakery argo-workflows create`.
 
 ---
 
@@ -97,20 +97,6 @@ Fine-tuned models are stored as a LoRA adapter (≈45 MB) + quantised base model
 
 ---
 
-## Testing & CI
-
-```bash
-./run_tests.sh  # runs data check, fine-tune stub, evaluation stub
-```
-
-Integrate with GitHub Actions: set secrets, then add a job that calls `./run_tests.sh` in a CPU container (it skips GPU-only paths by design).
-
----
-
-## License
-
-See `LICENSE` (Apache-2.0).
-
 ## Evaluation dashboard & metrics
 
 The `EvaluationFlow` builds the HTML card that shows vendor-vs-finetuned results.  Each run outputs a JSON payload (`self.evals`) consumed by Metaflow Cards and the web front-end.
@@ -134,3 +120,19 @@ Behind the scenes `EvaluationFlow` ingests two data sources:
 2. The latest `PromptCustomModels` run artifacts (to guarantee finetuned results are included even if log scraping misses them).
 
 The resulting `headers` + `rows` dict is rendered automatically by the Phototagger card template when you open the flow run in the Outerbounds UI.
+
+---
+
+## Testing & CI
+
+```bash
+./run_tests.sh  # runs data check, fine-tune stub, evaluation stub
+```
+
+Integrate with GitHub Actions: set secrets, then add a job that calls `./run_tests.sh` in a CPU container (it skips GPU-only paths by design).
+
+---
+
+## License
+
+See `LICENSE` (Apache-2.0).
